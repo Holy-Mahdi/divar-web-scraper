@@ -1,0 +1,16 @@
+# Virtual environment
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+
+# IDE / editor files
+.vscode/
+.idea/
+
+chromedriver-win64
+
