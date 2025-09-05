@@ -1,15 +1,29 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
+import requests
 
-service = Service("./chromedriver-win64/chromedriver.exe")
+url = "https://api.divar.ir/v8/postlist/w/search"
 
-driver =  webdriver.Chrome(service=service)
+headers ={
+    "accept" : "application/json, text/plain, */*",
+    "content-type" : "application/json",
+    "x-render-type" : "CSR",
+}
 
-driver.get("https://divar.ir/s/mashhad")
+payload = {
+    "city_ids": ["3"], 
+    "pagination_data": {
+        "@type": "type.googleapis.com/post_list.PaginationData",
+        "page": 1
+    },
+    "search_data": {
+        "form_data": {
+            "data": {
+                "category": {"str": {"value": "ROOT"}}
+            }
+        }
+    }
+}
 
-search_box = driver.find_element(By.CLASS_NAME, "kt-accordion")
+res = requests.post(url,headers = headers,json=payload)
+data = res.json
 
-print(search_box)
-
-driver.quit()
+print(data)
