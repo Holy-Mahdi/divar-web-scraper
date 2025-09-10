@@ -1,5 +1,11 @@
 import requests
 
+import tkinter as tk
+
+root = tk.Tk()
+root.title("Divar Scraper")
+
+
 url = "https://api.divar.ir/v8/postlist/w/search"
 
 headers ={
@@ -24,6 +30,6 @@ payload = {
 }
 
 res = requests.post(url,headers = headers,json=payload)
-data = res.json
+data = res.json()
 
 print(data)
