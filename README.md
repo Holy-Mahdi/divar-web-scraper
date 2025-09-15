@@ -35,7 +35,7 @@ A powerful scraper for **Divar** that leverages hidden network requests to extra
 ## 🔧 Requirements
 
 * Python 3.8+
-* Requests, BeautifulSoup, Pandas (depending on your setup).
+* Requests, BeautifulSoup, Pandas
 
 ## 📌 Notes
 
