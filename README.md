@@ -44,3 +44,5 @@ This project is for **educational and research purposes only**. Please respect D
 ---
 
 👨‍💻 Developed with ❤️ for data analysis and web scraping enthusiasts.
+
+Vibe coded
